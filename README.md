@@ -1,4 +1,7 @@
 # tinykms
+[![codecov](https://codecov.io/gh/henvo/tinykms/graph/badge.svg?token=OX07MHHHQY)](https://codecov.io/gh/henvo/tinykms)
+![github](https://github.com/henvo/tinykms/actions/workflows/test.yml/badge.svg)
+
 A tiny in-memory key management "system" that helps managing multiple keys
 inside a key set (e.g. rotating).
 
