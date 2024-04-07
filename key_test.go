@@ -27,3 +27,18 @@ func TestKey(t *testing.T) {
 		t.Errorf("Expected Priority to be %d, got %d", 10, key.Priority)
 	}
 }
+
+func TestKeyString(t *testing.T) {
+	rawJSON := []byte(`{ "id": "1", "raw": "1234abcd", "priority": 10 }`)
+
+	var key Key
+	err := json.Unmarshal(rawJSON, &key)
+
+	if err != nil {
+		t.Errorf("Expected no error. Received: %s", err)
+	}
+
+	if key.String() != "1234abcd" {
+		t.Errorf("Expected 1234abcd, received: %s", key.String())
+	}
+}

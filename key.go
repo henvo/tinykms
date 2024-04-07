@@ -22,3 +22,8 @@ type Key struct {
 	// CreatedAt represents the date the key was generated.
 	CreatedAt time.Time `json:"created_at"`
 }
+
+// Implement the Stringer interface.
+func (k Key) String() string {
+	return k.Raw
+}
